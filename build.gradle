@@ -68,7 +68,7 @@ dependencies {
 	runtime group: 'javax.validation', name: 'validation-api', version: '1.1.0.Final'
 	runtime group: 'org.hibernate', name: 'hibernate-validator', version: '5.4.1.Final'
 	runtime group: 'org.glassfish', name: 'javax.el', version: '3.0.1-b08'
-	
+
 	//JAX-RS runtime
 	runtime group: 'org.glassfish.jersey.containers', name: 'jersey-container-servlet', version: '2.25.1'
 	runtime group: 'org.glassfish.jersey.media', name: 'jersey-media-json-jackson', version: '2.25.1'
@@ -97,13 +97,13 @@ tasks.withType(GroovyCompile) {
 }
 
 // テナント作成ツール実行
-task runTenantBatch(type: JavaExec, group: 'application', description : 'execute tenant batch.') {
+task tenantA(type: JavaExec, group: 'application', description : 'execute tenant batch.') {
 	main = "org.iplass.mtp.tools.batch.tenant.TenantBatch"
 	classpath = sourceSets.main.runtimeClasspath
 }
 
 // Entity Java マッピングクラス作成ツール実行
-task createEntityClass(type: JavaExec, group: 'application', description : 'create entity java class.') {
+task mappingA(type: JavaExec, group: 'application', description : 'create entity java class.') {
 	main = "org.iplass.mtp.tools.batch.entity.EntityJavaMappingClassCreator"
 	classpath = sourceSets.main.runtimeClasspath
 	standardInput = System.in
