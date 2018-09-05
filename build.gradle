@@ -97,13 +97,13 @@ tasks.withType(GroovyCompile) {
 }
 
 // テナント作成ツール実行
-task tenantABCDE(type: JavaExec, group: 'application', description : 'execute tenant batch.') {
+task tenantABCDEFG(type: JavaExec, group: 'application', description : 'execute tenant batch.') {
 	main = "org.iplass.mtp.tools.batch.tenant.TenantBatch"
 	classpath = sourceSets.main.runtimeClasspath
 }
 
 // Entity Java マッピングクラス作成ツール実行
-task mappingABCDE(type: JavaExec, group: 'application', description : 'create entity java class.') {
+task mappingABCDEFG(type: JavaExec, group: 'application', description : 'create entity java class.') {
 	main = "org.iplass.mtp.tools.batch.entity.EntityJavaMappingClassCreator"
 	classpath = sourceSets.main.runtimeClasspath
 	standardInput = System.in
